@@ -1,0 +1,702 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat';
+    background-color: #f0e3ca;
+}
+
+header{
+    height: 100vh;
+    
+}
+
+a{
+    text-decoration: none;
+    color: #444;
+}
+
+ul{
+    list-style: none;
+}
+
+li a{
+    margin: 0 1.5rem;
+    display: block;
+    transition: all .1s ease;
+}
+
+li a:hover{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #c64756;
+}
+
+h2, h3{
+    font-weight: 600;
+    color: #444;
+}
+
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.75rem;
+}
+
+.right-nav{
+    display: flex;
+}
+
+.side-nav{
+    position: fixed;
+    top:0;
+    right:0;
+    background-color: #1c1427;
+    width: 50%;
+    height: 100vh;
+    display: block;
+    padding-top: 3rem;
+    padding-left: 1rem;
+    transform: translateX(100%);
+    overflow: hidden;
+    transition: transform .4s ease;
+    z-index: 10;
+}
+
+.side-nav a{
+    color: #fff;
+    margin-left: 1rem;
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+}
+
+#menu-icon{
+    font-size: 2.5rem;
+}
+
+#close-icon{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.show-mobile{
+    display: none;
+}
+
+.tagline{
+    font-weight: 400;
+    color: #444;
+    font-size: 3.3rem;
+    padding-top: 7.5rem;
+}
+
+.tagline + p{
+    line-height: 2;
+    margin: 1.2rem 0 2.5rem;
+
+}
+
+.hero{
+    width: 100%;
+    display: flex;
+}
+
+
+.left, .right{
+    width: 50%;
+}
+
+.left{
+    animation: slidein .7s forwards 0s ease;
+}
+
+.right{
+    animation: slideup .7s forwards 0s ease;
+}
+
+.btn{
+    background-color: #c64756;
+    padding: 1rem 4rem;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.btn:hover{
+    background-color: #811b27;
+}
+
+.nav-cta{
+    color: #c64756;
+    font-weight: 600;
+}
+
+.hero-image{
+    width: 100%;
+}
+
+#about{
+    background-color: #fff;
+    border-radius: 60px;
+    margin: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1.75rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+
+#about h1{
+    font-weight: 600;
+}
+
+.about-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .left, #about .right{
+    width: 50%;
+    padding: 4rem 0;
+}
+
+
+#showcase{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;   
+}
+
+#showcase img{
+    width: 90%
+}
+
+#showcase h1{
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#showcase .left, #showcase .right, #other .left, #other .right{
+    width: 50%;
+}
+
+#showcase .right{
+    background-color: #fff;
+    color: #444;
+    margin: 3rem;
+    box-shadow: 0 1.75rem 2rem rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem 0 1rem 0;
+}
+
+#showcase p{
+    text-align: center;
+    line-height: 2;
+    margin-top: .5rem;
+}
+
+#showcase .btn{
+    text-align: center;
+    display: block;
+    width: 80%;
+    margin-top: 1rem;
+}
+
+#other{
+    display: flex;
+    width: 80%;
+    margin:0 auto;
+}
+
+#other img{
+    width: 90%;
+    margin-top: 2rem;
+}
+
+#other .right{
+    padding: 2.5rem;
+}
+
+#other h1{
+    font-weight: 600;
+    color: #444;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#other p{
+    line-height: 2;
+    margin-bottom: 1.2rem;
+}
+
+
+#showcase input{
+    display: block;
+    margin: 1rem auto;
+    font-size: 1rem;
+    font-family: inherit;
+    width: 80%;
+    color:#444;
+    padding: 1rem 1.25rem;
+    border: 1px solid #444;
+    border-radius: 4px;
+    outline: none;
+}   
+
+#about img{
+    width: 90%;
+    margin-left: 2rem;
+}
+
+.mobile-img{
+    margin: 2rem 5rem 2rem 0;
+    display: none;
+}
+
+.about-desc{
+    font-weight: bold;
+    color: #444;
+    font-size: 2.5rem;
+}
+
+.about-p{
+    line-height: 2;
+    margin: 1.2rem 0 2rem;
+}
+
+#product{
+    padding-top: 3rem;
+}
+
+#product h1, #pricing h1{
+    font-weight: 600;
+    color: #444;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+
+#product p, #pricing p{
+    text-align: center;
+    line-height: 2;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+#pricing{
+    padding-top: 1rem;
+}
+
+#pricing h1{
+    margin-top: 3rem;
+}
+
+#pricing h1 + p{
+    width: 50%;
+    margin: auto;
+}
+
+.red{
+    color: #c64756;
+}
+
+.learn-more{
+    font-weight: 600;
+}
+
+.card{
+    background-color: #fff;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 1.75rem 2rem rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding: 2rem 2rem 3.5rem 2rem;
+    transition: all .5s ease;
+}
+
+.card .red{
+    font-weight: 600;
+}
+
+.card-cta{
+    display: block;
+    padding: .25rem;
+    margin-top: 2rem;
+    width: 80%;
+    margin: 2rem auto 0;
+}
+
+/* .card:hover{
+    background-color: #c64756;
+    color: #fff;
+} */
+
+.card img{
+    width: 80%;
+}
+
+
+.features, .prices{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+.features{
+    padding: 2rem;
+}
+
+.prices{
+    padding: 2rem 6rem;  
+}
+
+.prices .card{
+    line-height: 2;
+    border-radius: 20px;
+}
+
+.card:hover{
+    transform: translateY(-5%);
+}
+
+
+
+#footer{
+    padding: 3rem 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer .links ul, #footer .socials ul{
+    display: flex;
+    justify-content: center;
+}
+
+#footer .links ul a{
+    margin: 0 1rem;
+}
+
+
+.socials ul a{
+    font-size: 2rem;
+    margin: 0 .5rem;
+}
+
+.socials ul a:hover, #footer .links ul a:hover{
+    color: #c64756;
+}
+
+@media (min-width: 1375px){
+    .hero-image{
+        margin-top: 4rem;
+        width: 90%;
+        padding: 4rem;
+    }
+
+    .hero section{
+        margin-top: 7rem;
+    }
+}
+
+@media(max-width: 1200px){
+    header{
+        height: 625px;
+    }
+
+    .hero-image{
+        margin-top: 5rem;
+        width: 100%;
+    }
+
+    #about .left{
+        width: 60%;
+    }
+}
+
+@media (max-width: 900px){
+    html{
+        font-size: 90%;
+    }
+
+    .hero-image{
+        margin-top: 5rem;
+        width: 100%;
+    }
+
+    #menu-icon{
+        font-size: 3rem;
+    }
+
+    .nav-cta{
+        font-weight: 400;
+    }
+
+
+    h3, p,.hero-cta, .about-cta, .card-cta, #showcase .btn, input, #footer{
+        font-size: 1.25rem;
+    }
+
+    .learn-more{
+        font-size: 1.5rem;
+    }
+
+
+    #showcase .right{
+        padding: 4rem;
+    }
+    .card-cta{
+        width:70%;
+    }
+
+    .show-mobile{
+        display: block;
+    }
+
+    .right-nav{
+        display: none;
+    }
+
+    .mobile-img{
+        display: block;
+    }
+
+    .desktop-img{
+        display: none;
+    }
+
+    #about .left h1, #other h1{
+        text-align: center; 
+    }
+
+    #about .left p{
+        text-align: left;
+    }
+
+    li a:hover{
+        font-size: 2rem;
+        color:#fb3640;
+    }
+
+    #about .left, #about .right{
+        width: 100%;
+    }
+
+    .features{
+        display: block;
+        margin-top: 0;
+    }
+
+
+    #pricing h1 + p{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .card{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 2rem 0 4rem;
+        padding: 3rem;
+    }
+
+    .features .card-desc{
+        margin-left: 3rem;
+    }
+
+    .prices{
+        display:block;
+    }
+
+    .prices .card{
+        margin: 6rem auto;
+    }
+
+    .prices .card{
+        margin-top: 0;
+    }
+
+    .card img{
+        width: 40%;
+    }
+
+    #product .card p{
+        text-align: left;
+    }
+
+    .about-content{
+        display: block;
+    }
+
+    #about .left, #about .right{
+        width: 100%;
+        padding: 4rem 0 2rem;
+        
+    }
+
+    #showcase, #other{
+        display: block;
+    }
+
+    #showcase .right{
+        width: 90%;
+        margin: auto;
+    }
+
+    #other .right{
+        width: 100%;
+    }
+
+    #footer{
+        flex-direction: column;
+    }
+
+    #footer > div:nth-child(2){
+        margin: 3rem 0;
+    }
+
+    #footer .socials ul a{
+        font-size: 3rem;
+    }
+
+
+    .card:hover{
+        transform: translateY(0%);
+    }
+}   
+
+@media (max-width: 800px){
+    html{
+        font-size: 80%;
+    }
+    .hero-image{
+        margin-top: 8rem;
+    }    
+}
+
+
+@media (max-width: 710px){
+    html{
+        font-size: 70%;
+    }
+
+    h3, p{
+        font-size: 1.5rem;
+    }
+
+    .hero{
+        display: block;
+    }
+
+
+    .hero-image{
+        margin-top: 3rem;
+        width: 50%;
+        margin-left: 20%;
+    }
+
+    .hero .right, .hero .left, .hero .left section{
+        width: 100%;
+    }
+
+    .card{
+        display: block;
+        
+    }
+
+    #product .card p{
+        margin-right:8%;
+        text-align: justify;
+        margin-bottom: 5%;
+    }
+
+    .card-desc{
+        margin:0;
+    }
+
+    .hero .left section{
+        text-align: center; 
+    }
+
+    .tagline{
+        padding-top: 4rem;
+    }
+
+    .tagline + p{
+        padding-top: 1rem;
+        width: 100%;
+    }
+
+    .hero-cta, .about-cta{
+        display:inline-block;
+    }
+}
+
+
+
+@keyframes slidein {
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideup{
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.reveal{
+    transform: translateX(0%);
+}
+
+.hide{
+    display: none;
+}
+
+
+
