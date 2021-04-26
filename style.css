@@ -592,6 +592,10 @@ h2, h3{
     #footer .socials ul a{
         font-size: 3rem;
     }
+    
+    #footer p{
+        font-size: .75rem;
+    }
 
 
     .card:hover{
